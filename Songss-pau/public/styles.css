@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ffeb3b, #ffd600); /* Yellow gradient background */
+    color: #ffffff; /* Light text color */
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+    color: #4caf50;
+}
+
+/* Song Container for Playlist */
+.song-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Song Card for Playlist */
+.song-card {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    background: linear-gradient(135deg, #3e3e3e, #1e1e1e); /* Gradient card background */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 90%; /* Card width */
+    max-width: 600px; /* Max width */
+    transition: transform 0.3s;
+}
+
+.song-card:hover {
+    transform: scale(1.05);
+}
+
+/* Song Image */
+.song-image img {
+    width: 100px; /* Fixed width for image */
+    height: 100px; /* Fixed height for image */
+    object-fit: cover;
+    border-radius: 8px 0 0 8px; /* Rounded corners on left */
+}
+
+/* Song Info */
+.song-info {
+    padding: 15px;
+    flex-grow: 1; /* Allow to take remaining space */
+}
+
+.song-info h2 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.song-info p {
+    color: #b3b3b3; /* Lighter text color */
+}
+
+/* Song Options */
+.song-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center options */
+    padding: 10px;
+    background-color: #282828; /* Slightly lighter background */
+}
+
+/* Buttons */
+button {
+    padding: 8px 12px; /* Slightly larger padding for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px 0; /* Margin for separation */
+    font-weight: bold;
+}
+
+/* Edit Button */
+.edit-btn {
+    background: linear-gradient(45deg, #4caf50, #8bc34a); /* Green gradient for edit */
+    color: white;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(45deg, #388e3c, #7cb342);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(45deg, #f44336, #e57373); /* Red gradient for delete */
+    color: white;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(45deg, #c62828, #ef5350);
+}
+
+/* Audio Player Styling */
+audio {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px; /* Rounded corners for audio player */
+    background: linear-gradient(45deg, #3b3b3b, #1e1e1e); /* Gradient for audio player */
+}
+
+/* Add Song Button */
+.add-song-button {
+    margin: 20px auto;
+    padding: 10px 20px; /* Slightly larger padding */
+    background: linear-gradient(45deg, #007bff, #00bfff); /* Blue gradient color */
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold; /* Bold text */
+}
+
+.add-song-button:hover {
+    background: linear-gradient(45deg, #0056b3, #0099cc);
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+    .song-card {
+        flex-direction: column; /* Stack for smaller screens */
+    }
+
+    .song-image img {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height for aspect ratio */
+    }
+}
